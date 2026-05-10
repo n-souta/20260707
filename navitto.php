@@ -3,7 +3,7 @@
  * Plugin Name:       Navitto
  * Plugin URI:        https://wordpress.org/plugins/navitto/
  * Description:       Fixed navigation bar that follows H2 headings and shows a simple, sticky table of contents.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            nsouta
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * プラグインバージョン
  */
-define( 'NAVITTO_VERSION', '1.0.2' );
+define( 'NAVITTO_VERSION', '1.0.3' );
 
 /**
  * プラグインディレクトリパス

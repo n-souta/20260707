@@ -1,0 +1,98 @@
+# Japanese translation for Navitto
+# Copyright (C) 2026
+# This file is distributed under the same license as the Navitto package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Navitto\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-10 12:00+0000\n"
+"PO-Revision-Date: 2026-05-10 12:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: includes/class-navitto-settings.php
+msgid "Navitto Settings"
+msgstr "Navitto 設定"
+
+#: includes/class-navitto-settings.php
+msgid "Enable the fixed nav on all posts?"
+msgstr "すべての投稿で固定ナビを有効にしますか？"
+
+#: includes/class-navitto-settings.php
+msgid "Disable the fixed nav on all posts?"
+msgstr "すべての投稿で固定ナビを無効にしますか？"
+
+#: includes/class-navitto-settings.php
+msgid "Processing..."
+msgstr "処理中..."
+
+#: includes/class-navitto-settings.php
+msgid "An error has occurred."
+msgstr "エラーが発生しました。"
+
+#: includes/class-navitto-settings.php
+msgid "Default behavior"
+msgstr "デフォルト動作"
+
+#: includes/class-navitto-settings.php
+msgid "Enable by default for new posts"
+msgstr "新規投稿でデフォルトで有効にする"
+
+#: includes/class-navitto-settings.php
+msgid "Configure the default behavior when creating new posts."
+msgstr "新規投稿作成時のデフォルト動作を設定します。"
+
+#: includes/class-navitto-settings.php
+msgid "Enabled"
+msgstr "有効"
+
+#: includes/class-navitto-settings.php
+msgid "If unchecked, the fixed nav must be enabled manually on each new post."
+msgstr "チェックを外すと、新しく作成する投稿では手動で有効化が必要になります。"
+
+#: includes/class-navitto-settings.php
+msgid "Bulk apply"
+msgstr "一括適用"
+
+#: includes/class-navitto-settings.php
+msgid "Override the fixed nav setting for all posts at once. You can later run the opposite action to revert the global change."
+msgstr "すべての投稿の固定ナビ設定を一括で上書きします。必要に応じて「すべて有効にする」「すべて無効にする」の反対の操作を実行すれば、再度一括で戻せます。"
+
+#: includes/class-navitto-settings.php
+msgid "Enable on all posts"
+msgstr "すべての投稿で有効にする"
+
+#: includes/class-navitto-settings.php
+msgid "Enable the fixed nav on all posts"
+msgstr "すべての投稿で固定ナビを有効にする"
+
+#: includes/class-navitto-settings.php
+msgid "Disable on all posts"
+msgstr "すべての投稿で無効にする"
+
+#: includes/class-navitto-settings.php
+msgid "Disable the fixed nav on all posts"
+msgstr "すべての投稿で固定ナビを無効にする"
+
+#: includes/class-navitto-settings.php
+#, php-format
+msgid "%d posts enabled."
+msgstr "%d 件の投稿で有効にしました。"
+
+#: includes/class-navitto-settings.php
+#, php-format
+msgid "%d posts disabled."
+msgstr "%d 件の投稿で無効にしました。"
+
+#: includes/class-navitto-settings.php
+msgid "You do not have permission to perform this action."
+msgstr "この操作を実行する権限がありません。"
+
+#: includes/class-navitto-settings.php
+msgid "Security check failed."
+msgstr "セキュリティチェックに失敗しました。"

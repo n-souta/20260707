@@ -5,7 +5,7 @@ Tags: heading, navigation, table of contents, toc, sticky
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,9 @@ https://translate.wordpress.org/projects/wp-plugins/navitto/
 
 == Changelog ==
 
+= 1.0.3 = (2026-05-10)
+* Bundled Japanese translations for the settings screen (languages/navitto-ja).
+
 = 1.0.2 = (2026-05-01)
 * Improve H2 detection when multiple content containers exist (e.g. SWELL).
 * Hide the fixed nav after passing the last tracked heading when there is no following H2.
@@ -81,6 +84,9 @@ https://translate.wordpress.org/projects/wp-plugins/navitto/
 * Initial release on the WordPress.org Plugin Directory.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Bundled ja translation files for Settings > Navitto when the site language is Japanese.
 
 = 1.0.2 =
 Frontend fixes for SWELL heading detection and hiding the nav after the last section.
