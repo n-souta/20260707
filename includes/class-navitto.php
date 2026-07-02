@@ -259,8 +259,20 @@ class Navitto_Main {
 	}
 
 	private function count_h2_headings( $content ) {
-		preg_match_all( '/<h2[^>]*>.*?<\/h2>/is', $content, $matches );
-		return count( $matches[0] );
+		if ( '' === $content ) {
+			return 0;
+		}
+
+		$count = 0;
+
+		preg_match_all( '/<h2[^>]*>/i', $content, $tag_matches );
+		$count += count( $tag_matches[0] );
+
+		// ブロックエディター: level 2 の見出しブロック（SWELL 等）
+		preg_match_all( '/<!--\s+wp:heading\s+\{[^}]*"level"\s*:\s*2[^}]*\}/i', $content, $block_matches );
+		$count += count( $block_matches[0] );
+
+		return $count;
 	}
 
 	public function get_version() {

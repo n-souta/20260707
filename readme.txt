@@ -5,7 +5,7 @@ Tags: heading, navigation, table of contents, toc, sticky
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,11 @@ https://translate.wordpress.org/projects/wp-plugins/navitto/
 
 == Changelog ==
 
+= 1.0.4 = (2026-05-20)
+* Fix fixed nav placement on SWELL (restore header inside insertion; fixes nav not appearing correctly).
+* Improve heading detection when theme TOC has too few links (fallback to H2).
+* SWELL: prefer H2 detection order; support block headings with level 2.
+
 = 1.0.3 = (2026-05-10)
 * Bundled Japanese translations for the settings screen (languages/navitto-ja).
 
@@ -84,6 +89,9 @@ https://translate.wordpress.org/projects/wp-plugins/navitto/
 * Initial release on the WordPress.org Plugin Directory.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Fixes SWELL header placement and improves H2 heading detection.
 
 = 1.0.3 =
 Bundled ja translation files for Settings > Navitto when the site language is Japanese.

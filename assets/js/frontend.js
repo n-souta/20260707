@@ -47,17 +47,33 @@
 				$.extend(this.settings, navittoData);
 			}
 
-			$(document).ready(function() {
+			var bootstrap = function() {
 				self.detectHeadings();
 				self.filterSelectedH2();
 
 				var minHeadings = (self.settings.displayMode === 'select') ? 1 : 2;
 				if (self.headings.length >= minHeadings) {
-					self.assignIds();
-					self.findHeaderParent();
-					self.createNav();
-					self.bindEvents();
+					if (!self.$nav || !self.$nav.length) {
+						self.assignIds();
+						self.findHeaderParent();
+						self.createNav();
+						self.bindEvents();
+					}
+					return true;
 				}
+				return false;
+			};
+
+			$(document).ready(function() {
+				bootstrap();
+			});
+
+			$(window).on('load.navitto', function() {
+				setTimeout(function() {
+					if (!self.$nav || !self.$nav.length) {
+						bootstrap();
+					}
+				}, 150);
 			});
 		},
 
@@ -66,19 +82,24 @@
 		   ================================================================== */
 
 		detectHeadings: function() {
+			var minHeadings = (this.settings.displayMode === 'select') ? 1 : 2;
 			var detection = this.settings.detection;
 			if (!detection || !detection.detectionOrder) {
+				this.headings = [];
 				this.collectH2Headings();
 				return;
 			}
 			var order = detection.detectionOrder;
 			for (var i = 0; i < order.length; i++) {
 				var entry = order[i];
+				this.headings = [];
 				if (entry.source === 'h2') {
 					this.collectH2Headings();
-					if (this.headings.length > 0) return;
 				} else {
-					if (this.collectFromToc(entry)) return;
+					this.collectFromToc(entry);
+				}
+				if (this.headings.length >= minHeadings) {
+					return;
 				}
 			}
 		},
@@ -215,6 +236,7 @@
 				this.insertMode = 'body';
 				return;
 			}
+
 			// SWELL: #header が固定ヘッダーの親コンテナ
 			var $swellHeader = $('#header');
 			if ($swellHeader.length > 0) {

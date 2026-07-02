@@ -231,9 +231,17 @@ class Navitto_Detector {
 
 		// 1. テーマ内蔵目次の検出
 		$theme_key = $this->detect_theme_toc();
+
+		// SWELL: 固定ナビは本文 H2 を優先（内蔵目次だけだとリンク数不足で表示されないことがある）
+		if ( 'swell' === $theme_key ) {
+			$data['detectedTheme'] = $this->theme_toc_selectors['swell']['name'];
+		}
+
 		if ( $theme_key && isset( $this->theme_toc_selectors[ $theme_key ] ) ) {
 			$t = $this->theme_toc_selectors[ $theme_key ];
-			$data['detectedTheme']    = $t['name'];
+			if ( 'swell' !== $theme_key ) {
+				$data['detectedTheme'] = $t['name'];
+			}
 			$data['detectionOrder'][] = array(
 				'source'    => 'theme',
 				'name'      => $t['name'],
@@ -275,13 +283,18 @@ class Navitto_Detector {
 			}
 		}
 
-		// 4. H2フォールバック（常に最後）
-		$data['detectionOrder'][] = array(
+		// 4. H2フォールバック（SWELL は先頭、それ以外は末尾）
+		$h2_entry = array(
 			'source'    => 'h2',
 			'name'      => 'H2 Auto Detect',
 			'container' => '',
 			'items'     => '',
 		);
+		if ( 'swell' === $theme_key ) {
+			array_unshift( $data['detectionOrder'], $h2_entry );
+		} else {
+			$data['detectionOrder'][] = $h2_entry;
+		}
 
 		return $data;
 	}
