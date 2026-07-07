@@ -1,0 +1,41 @@
+PTE 申請文（Navitto / 日本語）
+======================================================
+
+【2026年6月〜】投稿先は Make WordPress Slack の #ja-requests
+（旧 WordSlack の #requests から移行）
+
+ワークスペース: Make WordPress Slack（wordpress.slack.com）
+チャンネル:   #ja-requests
+直接リンク:   https://wordpress.slack.com/archives/C0B9ARYJ160
+
+参加手順:
+  1. https://make.wordpress.org/chat/ から Make WordPress Slack に参加
+  2. Slack 左サイドバー「チャンネル」→「チャンネルに参加する」
+  3. ja-requests と検索 → 参加
+  または上記直接リンクを開く
+
+※ 旧 WordSlack（wpja.slack.com）の #requests もまだ使える場合がありますが、
+  日本チーム公式の移行先は #ja-requests です。
+
+投稿前: Stable Readme + Stable の翻訳提案を可能な限り完了しておく
+
+
+--- コピー用（そのまま貼り付け） ---
+
+PTE権限の付与をお願いします。
+
+プロジェクト:
+https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/
+
+対象:
+- Stable Readme (latest release)
+- Stable (latest release)
+
+WordPress.org ユーザー名:
+@nsouta
+
+自作プラグイン Navitto の日本語翻訳を継続的にメンテナンスしたいため、
+PTE 権限の付与をお願いします。
+Stable Readme および Stable の翻訳提案済みです。必要があれば追加修正します。
+
+--- ここまで ---

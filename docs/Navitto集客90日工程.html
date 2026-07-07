@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Navitto 作業工程（最新版）</title>
+<style>
+body { font-family: "Yu Gothic", "Meiryo", sans-serif; line-height: 1.6; max-width: 820px; margin: 40px auto; color: #222; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+h2 { font-size: 18px; margin-top: 28px; color: #1a1a1a; }
+h3 { font-size: 15px; margin-top: 20px; }
+p { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; }
+th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: #f0f0f0; font-weight: bold; }
+ul, ol { margin: 8px 0 16px; }
+li { margin: 4px 0; }
+.note { background: #fff8e1; border-left: 4px solid #ffc107; padding: 10px 14px; margin: 16px 0; }
+.now { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 10px 14px; margin: 16px 0; }
+.flow { background: #f5f5f5; padding: 14px 18px; border-radius: 4px; font-family: monospace; white-space: pre-line; font-size: 13px; }
+.copy { background: #fafafa; border: 1px solid #ddd; padding: 14px 18px; border-radius: 4px; white-space: pre-line; font-size: 13px; }
+.meta { color: #555; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Navitto 作業工程（最新版）</h1>
+<p class="meta"><strong>最終更新:</strong> 2026年7月3日<br>
+<strong>前提:</strong> 週8〜15時間 / 広告費0円 / GlotPress PTE + オーガニック集客</p>
+
+<div class="now"><strong>今ここ:</strong> PTE 申請済み（#ja-requests）→ <strong>返信待ち</strong>。Stable Readme 入力完了（Waiting 17 / Untranslated 0）。</div>
+
+<h2>1. 現在の状態</h2>
+<table>
+<tr><th>項目</th><th>状態</th></tr>
+<tr><td>Stable Readme（GlotPress）</td><td>入力完了。Waiting 17 / Untranslated 0 → Approve 待ち</td></tr>
+<tr><td>PTE 申請</td><td>#ja-requests に投稿済み（@nsouta）→ 返信待ち</td></tr>
+<tr><td>readme.txt（SXO改訂・英語）</td><td>ローカルのみ（未 commit / 未 SVN）</td></tr>
+<tr><td>GitHub</td><td>v1.0.4 push 済み</td></tr>
+<tr><td>ja ページ完全日本語化</td><td>PTE 取得後に Approve → 反映</td></tr>
+</table>
+<div class="note"><strong>重要:</strong> commit / push / SVN 反映は、明示的な指示があるまで実行しない。</div>
+
+<h2>2. 全体フロー</h2>
+<div class="flow">[完了] Stable Readme 翻訳入力（Waiting 17）
+[完了] #ja-requests へ PTE 申請
+[今ここ] PTE 付与の返信待ち
+         ├ 並行: ショート動画 / 事例 / KPI
+         ▼
+[次] Waiting 17件 Approve → ja ページ確認
+         ▼
+[その後] SXO readme SVN 反映 → GlotPress 翻訳・Approve
+         ▼
+[中期] 集客90日本番 / 本体UI 90%（1.0.5）</div>
+
+<h2>3. Phase A：PTE 返信待ち（今）</h2>
+<ul>
+<li>#ja-requests で申請投稿への<strong>返信</strong>を確認（週2〜3回）</li>
+<li>「joined #ja-requests」は参加通知のみ。PTE 付与ではない</li>
+<li>1週間以上返信なし → リマインド文を投稿（本文末尾にコピペ用あり）</li>
+</ul>
+<p><strong>並行作業:</strong> ショート動画 / レビュー依頼テンプレ / 事例ひな型 / KPI シート</p>
+
+<h2>4. Phase B：PTE 付与後（即日）</h2>
+<ol>
+<li><a href="https://translate.wordpress.org/projects/wp-plugins/navitto/stable-readme/ja/default/?filters%5Bstatus%5D=waiting">Waiting 17件</a>を Approve</li>
+<li>Stable Readme 100% 確認（Current 36 / Waiting 0）</li>
+<li><a href="https://translate.wordpress.org/projects/wp-plugins/navitto/stable/ja/default/?filters%5Bstatus%5D=waiting">Stable 本体</a> Waiting も Approve</li>
+<li><a href="https://ja.wordpress.org/plugins/navitto/">ja プラグインページ</a>で反映確認</li>
+</ol>
+
+<h2>5. Phase C：SXO readme 公開（Phase B 後）</h2>
+<ol>
+<li><a href="https://wordpress.org/plugins/developers/readme-validator/">Readme Validator</a> で検証</li>
+<li>【指示後】Plugin SVN に readme.txt 反映</li>
+<li>GlotPress で新文字列を翻訳 → PTE として Approve</li>
+<li>ja ページで SXO 訴求を確認</li>
+</ol>
+
+<h2>6. 集客 90日プラン</h2>
+<ol>
+<li><strong>WP公式ディレクトリ SXO/AEO</strong>（最優先）</li>
+<li><strong>縦型ショート動画</strong>（週2本）</li>
+<li><strong>事例・レビュー</strong>（信頼資産）</li>
+</ol>
+<table>
+<tr><th>作業</th><th>時間/週</th></tr>
+<tr><td>ショート動画</td><td>4h</td></tr>
+<tr><td>公式ページ改善</td><td>2h</td></tr>
+<tr><td>事例・レビュー</td><td>2h</td></tr>
+<tr><td>KPI・改善</td><td>1〜3h</td></tr>
+</table>
+
+<h2>7. 参考リンク</h2>
+<ul>
+<li>GlotPress: <a href="https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/">translate.wordpress.org/.../navitto</a></li>
+<li>#ja-requests: <a href="https://wordpress.slack.com/archives/C0B9ARYJ160">wordpress.slack.com/archives/C0B9ARYJ160</a></li>
+<li>ja プラグイン: <a href="https://ja.wordpress.org/plugins/navitto/">ja.wordpress.org/plugins/navitto</a></li>
+<li>Make WP Slack: <a href="https://make.wordpress.org/chat/">make.wordpress.org/chat</a></li>
+</ul>
+
+<h2>8. 【コピペ用】PTE リマインド（1週間以上返信なし）</h2>
+<div class="copy">@nsouta です。先日 #ja-requests に PTE 付与をお願いしました。
+お忙しいところ恐れ入りますが、ご確認いただけますでしょうか。
+
+プロジェクト:
+https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/
+
+対象: Stable Readme / Stable
+WordPress.org ユーザー名: @nsouta
+
+よろしくお願いします。</div>
+
+<h2>9. 関連ファイル（リポジトリ）</h2>
+<ul>
+<li><code>docs/NAVITTO-作業工程-最新.txt</code> … 本内容のテキスト版（マスター）</li>
+<li><code>docs/GLOTPRESS-WAITING-17-COPYPASTE.txt</code> … Waiting 訳文</li>
+<li><code>docs/WORDSLACK-PTE-REQUEST.txt</code> … PTE 申請文</li>
+<li><code>glotpress-stable-readme-ja.txt</code> … SXO 版日本語文案</li>
+</ul>
+
+</body>
+</html>

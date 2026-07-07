@@ -6,16 +6,16 @@ Note:
 - Keep punctuation and capitalization as needed for WordPress admin UI.
 
 EN: Navitto Settings
-JA: Navitto設定
+JA: Navitto 設定
 
 EN: Navitto
 JA: Navitto
 
 EN: Enable the fixed nav on all posts?
-JA: すべての投稿で固定ナビを有効にしますか？
+JA: すべての投稿で固定ナビを有効にしますか ?
 
 EN: Disable the fixed nav on all posts?
-JA: すべての投稿で固定ナビを無効にしますか？
+JA: すべての投稿で固定ナビを無効にしますか ?
 
 EN: Processing...
 JA: 処理中...
@@ -67,3 +67,91 @@ JA: この操作を実行する権限がありません。
 
 EN: Security check failed.
 JA: セキュリティチェックに失敗しました。
+
+================================================================
+Admin / Customizer (class-navitto-admin.php)
+================================================================
+
+EN: Show fixed nav (use H2 headings as-is)
+JA: 固定ナビを表示（H2 見出しをそのまま反映）
+
+EN: Choose headings to display
+JA: 表示する見出しを選択
+
+EN: Hide fixed nav
+JA: 固定ナビを非表示
+
+EN: No H2 headings found.
+JA: H2 見出しが見つかりません。
+
+EN: Display start position
+JA: 表示開始位置
+
+EN: From top of page
+JA: ページ上部から
+
+EN: Show fixed nav when the selected heading reaches the top of the page
+JA: 選択した見出しがページ上部に来たら固定ナビを表示
+
+EN: After passing the first selected heading
+JA: 選択した最初の見出しを通過後
+
+EN: Show after passing the first checked heading
+JA: チェックを入れた最初の見出しを通過したら表示
+
+EN: Fixed nav display mode
+JA: 固定ナビの表示方法
+
+EN: Horizontal scroll (show all)
+JA: 横スクロール可能（すべて表示）
+
+EN: Equal width (hide overflow)
+JA: 均等割（はみ出し非表示）
+
+EN: Navitto - Design
+JA: Navitto - デザイン
+
+EN: Simple
+JA: シンプル
+
+EN: Match theme
+JA: テーマ準拠
+
+EN: Design preset
+JA: デザインプリセット
+
+EN: Position
+JA: 配置位置
+
+EN: Fixed at top
+JA: 上部固定
+
+EN: Fixed at bottom
+JA: 下部固定
+
+EN: Nav height
+JA: ナビの高さ
+
+EN: Small
+JA: 小
+
+EN: Medium (default)
+JA: 中（デフォルト）
+
+EN: Large
+JA: 大
+
+EN: Font weight
+JA: 文字の太さ
+
+EN: Default
+JA: デフォルト
+
+EN: Bold
+JA: 太字
+
+EN: Transparent background
+JA: 背景を透明にする
+
+EN: When using the theme preset, make the nav background transparent.
+JA: テーマ準拠のとき、ナビの背景を透明にします。

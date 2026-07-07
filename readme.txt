@@ -1,11 +1,10 @@
 === Navitto ===
 
 Contributors: nsouta
-Tags: table of contents, navigation, sticky, toc, scroll
-Requires at least: 6.0
+Tags: heading navigation, table of contents, toc, navigation, mobile uxRequires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +95,11 @@ https://translate.wordpress.org/projects/wp-plugins/navitto/
 
 == Changelog ==
 
+= 1.0.5 = (2026-07-07)
+* Standardize translatable strings to English msgids (admin metabox and customizer).
+* Add Domain Path header for WordPress.org language pack compatibility.
+* Update bundled Japanese translation files (languages/navitto-ja).
+
 = 1.0.4 = (2026-05-20)
 * Fix fixed nav placement on SWELL (restore header inside insertion; fixes nav not appearing correctly).
 * Improve heading detection when theme TOC has too few links (fallback to H2).
@@ -115,6 +119,9 @@ https://translate.wordpress.org/projects/wp-plugins/navitto/
 * Initial release on the WordPress.org Plugin Directory.
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+Admin and customizer strings now use English msgids for GlotPress. Bundled ja translations cover the full admin UI.
 
 = 1.0.4 =
 Fixes SWELL header placement and improves H2 heading detection.

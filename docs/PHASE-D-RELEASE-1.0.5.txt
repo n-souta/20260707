@@ -1,0 +1,113 @@
+================================================================================
+Phase D — 1.0.5 リリース手順（本体 UI 日本語化 / i18n 標準化）
+================================================================================
+最終更新: 2026-07-07
+前提: Phase C（Stable Readme 日本語化）完了済み / PTE 付与済み（@nsouta）
+
+
+================================================================================
+■ ローカルで完了した変更（2026-07-07）
+================================================================================
+
+  [x] navitto.php … Version 1.0.5 / NAVITTO_VERSION / Domain Path: /languages
+  [x] class-navitto-admin.php … msgid 英語化（前回完了）
+  [x] languages/navitto.pot … 全48文字列（Settings 21 + Admin 27）
+  [x] languages/navitto-ja.po … 同上・日本語訳完備
+  [x] languages/navitto-ja.mo … po からコンパイル済み
+  [x] readme.txt … Stable tag 1.0.5 / Changelog / Upgrade Notice
+  [x] glotpress-stable-ui-ja.txt … GlotPress 入力用文案（スタイルガイド準拠）
+
+
+================================================================================
+■ あなたがやること（順番固定）
+================================================================================
+
+【Step 1】家の PC で SVN 1.0.5 タグ作成（先に実施）
+────────────────────────────────────────
+  ※ GlotPress の Original が日本語のままなのは、本番 SVN が 1.0.4（日本語 msgid）のため。
+    この状態で日本語→日本語を入力しても、1.0.5 公開後に英語 msgid に切り替わり無効になる。
+
+  会社 PC には svn 未導入のため、家の PC で実施。
+
+  1. Plugin SVN をチェックアウト（未済の場合）
+     svn co https://plugins.svn.wordpress.org/navitto/ navitto.svn-wporg
+
+  2. trunk に 1.0.5 の全ファイルを反映
+     （navitto.php, includes/, assets/, languages/, readme.txt 等）
+
+  3. tags/1.0.5 を trunk からコピー
+     svn cp trunk tags/1.0.5
+
+  4. コミット
+     svn ci -m "Release 1.0.5: English msgids, Domain Path, full ja translations."
+
+  5. GitHub も tag v1.0.5 を push（任意だが推奨）
+
+  6. 数時間待つ → GlotPress が 1.0.5 を取り込み、admin 分の Original が英語になる
+
+
+【Step 2】GlotPress Stable UI — 英語 Original に日本語を入力・Approve
+────────────────────────────────────────
+  URL（未翻訳）:
+  https://translate.wordpress.org/projects/wp-plugins/navitto/stable/ja/default/?filters%5Bstatus%5D=untranslated
+
+  確認: Original が英語（例: "Hide fixed nav"）になっていること。
+        まだ日本語（例: "固定ナビを非表示"）なら Step 1 の反映待ち。
+
+  文案: glotpress-stable-ui-ja.txt（EN → JA をコピペ）→ Approve
+  目標: Stable UI 100%（英語 msgid ベース）→ 言語パック生成
+
+  ※ Settings 分（21件）はもともと英語 msgid で翻訳済みの可能性あり。
+    1.0.5 後は admin 分（27件）が英語 Original として新規出現する。
+
+
+【Step 3】GlotPress 再確認（タグ反映後 数時間〜1日）
+────────────────────────────────────────
+  - Stable UI が 90% 超 → WordPress.org 言語パックが自動生成
+  - ダッシュボード「更新」で日本語パック取得を確認
+
+  参照:
+  https://translate.wordpress.org/projects/wp-plugins/navitto/stable/ja/default/
+
+
+【Step 4】動作確認（日本語サイト）
+────────────────────────────────────────
+  □ 投稿編集: メタボックスが日本語（固定ナビを表示 / 表示する見出しを選択 等）
+  □ 外観 > カスタマイザー > Navitto - デザイン
+  □ 設定 > Navitto
+  □ 同梱 mo（languages/navitto-ja.mo）で即時日本語化されること
+
+
+================================================================================
+■ mo 再コンパイル（po を編集した場合）
+================================================================================
+
+  家の PC または Node.js 環境で:
+
+    cd navitto-github
+    npm install --no-save gettext-parser
+    node scripts/compile-mo.mjs
+
+  msgfmt が使える環境なら:
+    msgfmt -o languages/navitto-ja.mo languages/navitto-ja.po
+
+
+================================================================================
+■ 注意
+================================================================================
+
+  - 1.0.4 の本番は admin.php が日本語 msgid のため、GlotPress と不一致だった。
+    1.0.5 リリース後は英語 msgid に統一される。
+  - 同梱 po/mo があるため、言語パック生成前でも日本語 UI が使える。
+  - commit / push / SVN は明示指示があるまで自動実行しない（手順書のみ）。
+
+
+================================================================================
+■ 関連ファイル
+================================================================================
+
+  glotpress-stable-ui-ja.txt       … Stable UI コピペ用（48件）
+  glotpress-stable-readme-ja.txt   … Stable Readme（Phase C 完了）
+  languages/navitto.pot
+  languages/navitto-ja.po / .mo
+  scripts/compile-mo.mjs

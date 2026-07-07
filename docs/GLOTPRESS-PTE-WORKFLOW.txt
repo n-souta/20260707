@@ -1,0 +1,59 @@
+Navitto — GlotPress / PTE 運用ガイド
+======================================
+方針: readme.txt は英語正本。日本語は GlotPress で管理し、PTE として自己承認する。
+PTE 申請先: Make WordPress Slack の #ja-requests（2026年6月〜）
+
+最終更新: 2026-07-03
+
+
+■ 現在の状態
+────────────────────────────────────────
+
+  Stable Readme   Untranslated 0 / Waiting 17 / Current 19
+  PTE 申請        #ja-requests 投稿済み → 返信待ち
+  readme.txt SVN  保留（SXO改訂版はローカルのみ）
+
+  詳細マスター: docs/NAVITTO-作業工程-最新.txt
+
+
+■ PTE 申請チャンネル（重要・2026年6月〜）
+────────────────────────────────────────
+
+  ワークスペース: Make WordPress Slack（wordpress.slack.com）
+  チャンネル:     #ja-requests（旧 WordSlack #requests から移行）
+  参加:           https://make.wordpress.org/chat/
+  直接リンク:     https://wordpress.slack.com/archives/C0B9ARYJ160
+
+  ※「joined #ja-requests」は参加通知。PTE付与ではない。
+
+
+■ Phase B: PTE 付与後の Approve 手順
+────────────────────────────────────────
+
+  1. https://translate.wordpress.org/projects/wp-plugins/navitto/stable-readme/ja/default/?filters%5Bstatus%5D=waiting
+     → Waiting 17件を Approve
+
+  2. Current 36 / Waiting 0 / Untranslated 0 を確認
+
+  3. Stable 本体 Waiting も Approve
+     https://translate.wordpress.org/projects/wp-plugins/navitto/stable/ja/default/?filters%5Bstatus%5D=waiting
+
+  4. https://ja.wordpress.org/plugins/navitto/ で反映確認
+
+
+■ Phase C: SXO readme SVN（Phase B 完了後）
+────────────────────────────────────────
+
+  1. Readme Validator で英語 readme.txt 検証
+  2. 【指示後】SVN 反映
+  3. GlotPress で新文字列を翻訳 → Approve
+  4. 参照: glotpress-stable-readme-ja.txt
+
+
+■ 関連ファイル
+────────────────────────────────────────
+
+  docs/NAVITTO-作業工程-最新.txt         … マスター（コピペ用）
+  docs/GLOTPRESS-WAITING-17-COPYPASTE.txt … Waiting 17件訳文
+  docs/WORDSLACK-PTE-REQUEST.txt          … PTE申請・リマインド文
+  glotpress-stable-readme-ja.txt            … SXO版日本語文案

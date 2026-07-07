@@ -1,79 +1,211 @@
-# Copyright (C) 2026
+# Copyright (C) 2026 nsouta
 # This file is distributed under the same license as the Navitto package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Navitto 1.0.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-19T00:00+0000\n"
+"Project-Id-Version: Navitto 1.0.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/navitto\n"
+"POT-Creation-Date: 2026-07-07T00:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: includes/class-navitto-admin.php
-msgid "カスタム"
+msgid "Navitto"
 msgstr ""
 
 #: includes/class-navitto-admin.php
-msgid "文字色"
+msgid "Show fixed nav (use H2 headings as-is)"
 msgstr ""
 
 #: includes/class-navitto-admin.php
-msgid "背景色"
+msgid "Choose headings to display"
 msgstr ""
 
 #: includes/class-navitto-admin.php
-msgid "選択中テキスト色"
+msgid "Hide fixed nav"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "No H2 headings found."
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Display start position"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "From top of page"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Show fixed nav when the selected heading reaches the top of the page"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "After passing the first selected heading"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Show after passing the first checked heading"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Fixed nav display mode"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Horizontal scroll (show all)"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Equal width (hide overflow)"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Navitto - Design"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Simple"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Match theme"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Design preset"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Position"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Fixed at top"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Fixed at bottom"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Nav height"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Small"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Medium (default)"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Large"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Font weight"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Default"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Bold"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "Transparent background"
+msgstr ""
+
+#: includes/class-navitto-admin.php
+msgid "When using the theme preset, make the nav background transparent."
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "すべての投稿の固定ナビ設定を一括で上書きします。必要に応じて「すべて有効にする」「すべて無効にする」の反対の操作を実行すれば、再度一括で戻せます。"
+msgid "Navitto Settings"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "新規投稿でデフォルトで有効にする"
+msgid "Enable the fixed nav on all posts?"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "新規投稿作成時のデフォルト動作を設定します。"
+msgid "Disable the fixed nav on all posts?"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "チェックを外すと、新しく作成する投稿では手動で有効化が必要になります。"
+msgid "Processing..."
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "デフォルト動作"
+msgid "An error has occurred."
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "一括適用"
+msgid "Default behavior"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "すべて有効にする"
+msgid "Enable by default for new posts"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "すべて無効にする"
+msgid "Configure the default behavior when creating new posts."
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "すべての投稿で有効にする"
+msgid "Enabled"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "すべての投稿で無効にする"
+msgid "If unchecked, the fixed nav must be enabled manually on each new post."
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "有効"
+msgid "Bulk apply"
 msgstr ""
 
 #: includes/class-navitto-settings.php
-msgid "Navitto 設定"
+msgid "Override the fixed nav setting for all posts at once. You can later run the opposite action to revert the global change."
 msgstr ""
 
+#: includes/class-navitto-settings.php
+msgid "Enable on all posts"
+msgstr ""
+
+#: includes/class-navitto-settings.php
+msgid "Enable the fixed nav on all posts"
+msgstr ""
+
+#: includes/class-navitto-settings.php
+msgid "Disable on all posts"
+msgstr ""
+
+#: includes/class-navitto-settings.php
+msgid "Disable the fixed nav on all posts"
+msgstr ""
+
+#: includes/class-navitto-settings.php
+#, php-format
+msgid "%d posts enabled."
+msgstr ""
+
+#: includes/class-navitto-settings.php
+#, php-format
+msgid "%d posts disabled."
+msgstr ""
+
+#: includes/class-navitto-settings.php
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/class-navitto-settings.php
+msgid "Security check failed."
+msgstr ""

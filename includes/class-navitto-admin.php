@@ -140,24 +140,24 @@ class Navitto_Admin {
 				<label>
 					<input type="radio" name="navitto_display_mode" value="show_all"
 						<?php checked( $display_mode, 'show_all' ); ?> />
-					<?php esc_html_e( '固定ナビを表示（H2タグをそのまま反映）', 'navitto' ); ?>
+					<?php esc_html_e( 'Show fixed nav (use H2 headings as-is)', 'navitto' ); ?>
 				</label>
 				<label>
 					<input type="radio" name="navitto_display_mode" value="select"
 						<?php checked( $display_mode, 'select' ); ?> />
-					<?php esc_html_e( '表示する見出しを選択', 'navitto' ); ?>
+					<?php esc_html_e( 'Choose headings to display', 'navitto' ); ?>
 				</label>
 				<label>
 					<input type="radio" name="navitto_display_mode" value="hide"
 						<?php checked( $display_mode, 'hide' ); ?> />
-					<?php esc_html_e( '固定ナビを非表示', 'navitto' ); ?>
+					<?php esc_html_e( 'Hide fixed nav', 'navitto' ); ?>
 				</label>
 			</div>
 
 			<!-- 見出し選択（select時のみ表示） -->
 			<div id="cp-h2-select-area" style="<?php echo esc_attr( $is_select ? '' : 'display:none;' ); ?>" data-navitto-empty="<?php echo esc_attr( empty( $h2_list ) ? '1' : '0' ); ?>">
 				<?php if ( empty( $h2_list ) ) : ?>
-					<p class="description" id="navitto-h2-empty-msg"><?php esc_html_e( 'H2見出しが見つかりません。', 'navitto' ); ?></p>
+					<p class="description" id="navitto-h2-empty-msg"><?php esc_html_e( 'No H2 headings found.', 'navitto' ); ?></p>
 				<?php else : ?>
 				<?php foreach ( $h2_list as $index => $h2_text ) :
 					$is_checked  = in_array( $index, $selected_h2, false );
@@ -189,27 +189,27 @@ class Navitto_Admin {
 
 			<!-- 表示開始位置（select時のみ表示） -->
 			<div class="cp-trigger-settings navitto-trigger-settings" style="<?php echo esc_attr( $is_select ? '' : 'display:none;' ); ?>">
-				<h4><?php esc_html_e( '表示開始位置', 'navitto' ); ?></h4>
+				<h4><?php esc_html_e( 'Display start position', 'navitto' ); ?></h4>
 
 				<label>
 					<input type="radio" name="_navitto_trigger_type" value="immediate"
 						<?php checked( $trigger_type, 'immediate' ); ?> />
-					<?php esc_html_e( 'ページ上部から', 'navitto' ); ?>
+					<?php esc_html_e( 'From top of page', 'navitto' ); ?>
 				</label>
-				<p class="description"><?php esc_html_e( '選択した見出しがページ上部に来たら固定ナビを表示', 'navitto' ); ?></p>
+				<p class="description"><?php esc_html_e( 'Show fixed nav when the selected heading reaches the top of the page', 'navitto' ); ?></p>
 
 				<label>
 					<input type="radio" name="_navitto_trigger_type" value="first_selected"
 						<?php checked( $trigger_type, 'first_selected' ); ?> />
-					<?php esc_html_e( '選択した最初の見出しを通過後', 'navitto' ); ?>
+					<?php esc_html_e( 'After passing the first selected heading', 'navitto' ); ?>
 				</label>
-				<p class="description"><?php esc_html_e( 'チェックを入れた最初の見出しを通過したら表示', 'navitto' ); ?></p>
+				<p class="description"><?php esc_html_e( 'Show after passing the first checked heading', 'navitto' ); ?></p>
 			</div>
 
 			<!-- 固定ナビの表示方法 -->
 			<div class="cp-nav-width-setting" style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #ddd;">
 				<label style="font-weight: 600; font-size: 12px; display: block; margin-bottom: 6px;">
-					<?php esc_html_e( '固定ナビの表示方法', 'navitto' ); ?>
+					<?php esc_html_e( 'Fixed nav display mode', 'navitto' ); ?>
 				</label>
 				<?php
 				$nav_width = get_post_meta( $post->ID, '_navitto_nav_width', true );
@@ -217,8 +217,8 @@ class Navitto_Admin {
 					$nav_width = 'scroll';
 				}
 				$nw_options = array(
-					'scroll' => __( '横スクロール可能（全て表示）', 'navitto' ),
-					'equal'  => __( '均等割（はみ出し非表示）', 'navitto' ),
+					'scroll' => __( 'Horizontal scroll (show all)', 'navitto' ),
+					'equal'  => __( 'Equal width (hide overflow)', 'navitto' ),
 				);
 				foreach ( $nw_options as $val => $label ) : ?>
 					<label style="display: block; margin-bottom: 4px; font-size: 13px;">
@@ -351,20 +351,20 @@ class Navitto_Admin {
 
 		// --- セクション: デザイン ---
 		$wp_customize->add_section( 'navitto_design', array(
-			'title'    => __( 'Navitto - デザイン', 'navitto' ),
+			'title'    => __( 'Navitto - Design', 'navitto' ),
 			'priority' => 200,
 		) );
 
 		$preset_choices = array(
-			'simple' => __( 'シンプル', 'navitto' ),
-			'theme'  => __( 'テーマ準拠', 'navitto' ),
+			'simple' => __( 'Simple', 'navitto' ),
+			'theme'  => __( 'Match theme', 'navitto' ),
 		);
 		$wp_customize->add_setting( 'navitto_preset', array(
 			'default'           => 'simple',
 			'sanitize_callback' => array( $this, 'sanitize_preset' ),
 		) );
 		$wp_customize->add_control( 'navitto_preset', array(
-			'label'   => __( 'デザインプリセット', 'navitto' ),
+			'label'   => __( 'Design preset', 'navitto' ),
 			'section' => 'navitto_design',
 			'type'    => 'select',
 			'choices' => $preset_choices,
@@ -376,12 +376,12 @@ class Navitto_Admin {
 			'sanitize_callback' => array( $this, 'sanitize_position' ),
 		) );
 		$wp_customize->add_control( 'navitto_position', array(
-			'label'   => __( '配置位置', 'navitto' ),
+			'label'   => __( 'Position', 'navitto' ),
 			'section' => 'navitto_design',
 			'type'    => 'radio',
 			'choices' => array(
-				'top'    => __( '上部固定', 'navitto' ),
-				'bottom' => __( '下部固定', 'navitto' ),
+				'top'    => __( 'Fixed at top', 'navitto' ),
+				'bottom' => __( 'Fixed at bottom', 'navitto' ),
 			),
 		) );
 
@@ -391,13 +391,13 @@ class Navitto_Admin {
 			'sanitize_callback' => array( $this, 'sanitize_nav_height' ),
 		) );
 		$wp_customize->add_control( 'navitto_nav_height', array(
-			'label'   => __( 'ナビの高さ', 'navitto' ),
+			'label'   => __( 'Nav height', 'navitto' ),
 			'section' => 'navitto_design',
 			'type'    => 'radio',
 			'choices' => array(
-				'small'  => __( '小', 'navitto' ),
-				'medium' => __( '中※デフォルト', 'navitto' ),
-				'large'  => __( '大', 'navitto' ),
+				'small'  => __( 'Small', 'navitto' ),
+				'medium' => __( 'Medium (default)', 'navitto' ),
+				'large'  => __( 'Large', 'navitto' ),
 			),
 		) );
 
@@ -407,12 +407,12 @@ class Navitto_Admin {
 			'sanitize_callback' => array( $this, 'sanitize_font_weight' ),
 		) );
 		$wp_customize->add_control( 'navitto_font_weight', array(
-			'label'   => __( '文字の太さ', 'navitto' ),
+			'label'   => __( 'Font weight', 'navitto' ),
 			'section' => 'navitto_design',
 			'type'    => 'radio',
 			'choices' => array(
-				'default' => __( 'デフォルト', 'navitto' ),
-				'bold'    => __( '太字', 'navitto' ),
+				'default' => __( 'Default', 'navitto' ),
+				'bold'    => __( 'Bold', 'navitto' ),
 			),
 		) );
 
@@ -422,8 +422,8 @@ class Navitto_Admin {
 			'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
 		) );
 		$wp_customize->add_control( 'navitto_theme_bg_transparent', array(
-			'label'       => __( '背景を透明にする', 'navitto' ),
-			'description' => __( 'テーマ準拠のとき、ナビの背景を透明にします。', 'navitto' ),
+			'label'       => __( 'Transparent background', 'navitto' ),
+			'description' => __( 'When using the theme preset, make the nav background transparent.', 'navitto' ),
 			'section'     => 'navitto_design',
 			'type'        => 'checkbox',
 		) );

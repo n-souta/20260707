@@ -1,0 +1,233 @@
+================================================================================
+Navitto 作業工程（最新版）— コピペ用マスタードキュメント
+================================================================================
+最終更新: 2026-07-07
+前提: 週8〜15時間 / 広告費0円 / オーガニック集客 + GlotPress PTE 運用
+
+
+================================================================================
+■ 現在の状態（2026-07-07）
+================================================================================
+
+【GlotPress / ja ページ】
+  Stable Readme   48/48 翻訳完了・ja ページ反映済み（Phase C 完了）
+  Stable UI       未翻訳あり（admin 英語 msgid 化後）→ Phase D で Approve
+  PTE             付与済み（@nsouta）
+
+【ローカル / 公開】
+  readme.txt（SXO・英語）     SVN 反映済み（Stable tag 1.0.4 時点）
+  1.0.5 コード変更            ローカル準備完了（未 commit / 未 SVN）
+  GitHub navitto              v1.0.4
+
+【方針】
+  - readme.txt は英語正本 → 日本語は GlotPress
+  - 1.0.5 はコードのみ別リリース（i18n 標準化 + 同梱 ja）
+  - commit / push / SVN は指示があるまで実行しない
+
+
+================================================================================
+■ 今どこにいるか（フロー図）
+================================================================================
+
+  [完了] Phase C: SXO readme SVN + Stable Readme 日本語化
+  [完了] Phase D ローカル準備: 1.0.5 / Domain Path / pot+po+mo / admin 英語 msgid
+  [今ここ] SVN 1.0.5 タグ（家の PC）→ その後 GlotPress Stable UI（英語 Original）
+           │
+           ▼
+  [次] 日本語管理画面の動作確認 / 言語パック生成確認
+
+
+================================================================================
+■ Phase A：PTE 返信待ち（今〜数日〜2週間）
+================================================================================
+
+【やること】
+  □ #ja-requests で申請投稿への返信を確認（週2〜3回）
+  □ 1週間以上返信なし → 同スレッドで丁寧にリマインド
+
+【返信の見分け】
+  ✅ PTE付与: 「PTEを付与しました」「Granted」「@nsouta に PTE」等
+  ❌ 参加通知: 「joined #ja-requests」→ PTE付与ではない
+
+【Slack 参加（済みの場合はスキップ）】
+  1. https://make.wordpress.org/chat/ で Make WordPress Slack に参加
+  2. ログイン: nsouta@chat.wordpress.org
+  3. チャンネル #ja-requests に参加
+     直接リンク: https://wordpress.slack.com/archives/C0B9ARYJ160
+
+【並行作業（PTE不要）】
+  □ ショート動画 1本目（Before/After）台本 or 撮影
+  □ レビュー依頼テンプレ作成
+  □ 事例ページひな型
+  □ 週次KPIシート作成
+  □ 本ドキュメントを Google ドキュメントに保存
+
+
+================================================================================
+■ Phase B：PTE 付与後（即日・1〜2時間）
+================================================================================
+
+【手順 — 順番固定】
+
+  1. Stable Readme Waiting 17件を Approve
+     https://translate.wordpress.org/projects/wp-plugins/navitto/stable-readme/ja/default/?filters%5Bstatus%5D=waiting
+
+  2. 100% 確認（Current 36 / Waiting 0 / Untranslated 0）
+     https://translate.wordpress.org/projects/wp-plugins/navitto/stable-readme/ja/default/
+
+  3. Stable（本体）Waiting も Approve（4件程度）
+     https://translate.wordpress.org/projects/wp-plugins/navitto/stable/ja/default/?filters%5Bstatus%5D=waiting
+
+  4. ja プラグインページで反映確認
+     https://ja.wordpress.org/plugins/navitto/
+
+【確認チェックリスト】
+  □ 説明が自然な日本語
+  □ Features / Installation / FAQ の英語混在が減った
+  □ 「設定」「外観」「プラグイン」等 WP 日本語用語と一致
+  □ Changelog が読める
+  □ スクリーンショット説明が日本語化
+
+【PTE 取得後の運用（今後ずっと）】
+  readme更新 → GlotPress入力 → 自分でApprove → jaページ確認
+  ※ 他人の承認待ちは不要
+
+
+================================================================================
+■ Phase C：SXO 改訂版 readme 公開（Phase B 完了後・1週間以内）
+================================================================================
+
+【タイミング】
+  現行 readme の ja ページ日本語化を確認してから SVN 反映する（安全）
+
+【手順】
+  1. 英語 readme.txt を Readme Validator で検証
+     https://wordpress.org/plugins/developers/readme-validator/
+
+  2. navitto.php Version / readme Stable tag / tags/{version} を一致
+
+  3. 【指示後】Plugin SVN に readme.txt をコミット
+
+  4. GlotPress に新規・変更文字列が出る → 翻訳入力
+
+  5. PTE として Approve
+
+  6. ja ページで SXO 訴求（スマホ導線・離脱抑制）を確認
+
+【SXO 改訳の参照ファイル】
+  ローカル readme.txt（英語正本）
+  glotpress-stable-readme-ja.txt（日本語文案）
+
+
+================================================================================
+■ Phase D：本体 UI 日本語化（中期・別リリース 1.0.5 等）
+================================================================================
+
+【目標】Stable 90% 超 → 言語パック初回生成 → WP管理画面で更新取得
+
+【課題】
+  - admin.php の msgid が日本語（GlotPress 非標準）
+  - Domain Path ヘッダー未記載
+  - navitto.pot が Settings 分のみ
+
+【対応（コード修正）— ローカル完了 2026-07-07】
+  1. navitto.php に Domain Path: /languages 追加  ✅
+  2. class-navitto-admin.php の msgid を英語に統一  ✅
+  3. navitto.pot / navitto-ja.po / navitto-ja.mo 再生成  ✅
+  4. GlotPress Stable で翻訳・Approve（SVN 1.0.5 反映後）  ← 次の作業
+  5. SVN tags/1.0.5 作成（家の PC）  ← 先に実施
+
+  詳細: docs/PHASE-D-RELEASE-1.0.5.txt
+  文案: glotpress-stable-ui-ja.txt
+
+
+================================================================================
+■ 集客 90日プラン（並行・Phase B 後に本番加速）
+================================================================================
+
+【優先順位】
+  1. WP公式ディレクトリ SXO/AEO（ストック型・最優先）
+  2. 縦型ショート動画（週2本）
+  3. 事例・レビュー・信頼資産
+
+【週次時間配分（目安）】
+  ショート動画制作      4h
+  公式ページ改善        2h
+  事例・レビュー運用    2h
+  指標確認・改善        1〜3h
+
+【週次KPI】
+  公式: 表示→インストール率、レビュー件数、評価
+  動画: 維持率（3秒/15秒）、保存率、公式リンク遷移
+  信頼: 事例数、レビュー依頼数、回収率
+
+【90日達成目安】
+  □ readme を2回以上改善
+  □ ショート動画 20本前後
+  □ 事例 4〜6件、レビュー依頼フロー確立
+  □ 週次KPIで傾向を言語化
+
+
+================================================================================
+■ 関連ドキュメント（リポジトリ内）
+================================================================================
+
+docs/NAVITTO-作業工程-最新.txt       … 本ファイル（マスター）
+docs/GLOTPRESS-WAITING-17-COPYPASTE.txt … Waiting 17件のコピペ用訳文
+docs/WORDSLACK-PTE-REQUEST.txt       … PTE申請文（投稿済み・再掲用）
+docs/GLOTPRESS-PTE-WORKFLOW.txt      … GlotPress 詳細手順
+docs/Navitto集客90日工程.html        … Googleドキュメント取込用
+glotpress-stable-readme-ja.txt         … SXO版 GlotPress 日本語文案
+readme.txt                           … 英語正本（SXO改訂・ローカル）
+
+
+================================================================================
+■ 参考リンク
+================================================================================
+
+ja プラグイン:     https://ja.wordpress.org/plugins/navitto/
+GlotPress (ja):    https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/
+Stable Readme:     https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/stable-readme/ja/default/
+Waiting 一覧:      https://translate.wordpress.org/projects/wp-plugins/navitto/stable-readme/ja/default/?filters%5Bstatus%5D=waiting
+Readme Validator:  https://wordpress.org/plugins/developers/readme-validator/
+Make WP Slack:     https://make.wordpress.org/chat/
+#ja-requests:      https://wordpress.slack.com/archives/C0B9ARYJ160
+GitHub:            https://github.com/n-souta/navitto
+日本チーム告知:    https://ja.wordpress.org/team/2026/06/10/7051/
+
+
+================================================================================
+■ 【おまけ】PTE リマインド文（1週間以上返信がない場合・コピー用）
+================================================================================
+
+@nsouta です。先日 #ja-requests に PTE 付与をお願いしました。
+お忙しいところ恐れ入りますが、ご確認いただけますでしょうか。
+
+プロジェクト:
+https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/
+
+対象: Stable Readme / Stable
+WordPress.org ユーザー名: @nsouta
+
+よろしくお願いします。
+
+
+================================================================================
+■ 【おまけ】PTE 申請文（投稿済み・再掲・コピー用）
+================================================================================
+
+はじめまして。nsouta と申します。
+Navitto のプラグイン作者です。
+
+プロジェクト:
+https://translate.wordpress.org/locale/ja/default/wp-plugins/navitto/
+
+対象:
+- Stable Readme (latest release)
+- Stable (latest release)
+
+WordPress.org ユーザー名: @nsouta
+
+自作プラグイン Navitto の日本語翻訳を継続的にメンテナンスしたいため、
+PTE 権限の付与をお願いします。
+Stable Readme および Stable の翻訳提案済みです。必要があれば追加修正します。
